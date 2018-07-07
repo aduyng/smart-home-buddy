@@ -59,3 +59,14 @@ typings/
 
 # next.js build output
 .next
+.vscode
+node_modules
+logs
+tmp
+heroku
+firebase-debug.log
+npm-debug.log
+dist
+tmp*
+keys
+protected

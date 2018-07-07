@@ -1,0 +1,5 @@
+cron:
+- description: "start informed delivery email checking"
+  url: /informed-delivery
+  schedule: every 2 hours from 8:00 to 14:00
+  timezone: America/Chicago
