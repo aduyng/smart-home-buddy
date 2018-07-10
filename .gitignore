@@ -69,4 +69,3 @@ npm-debug.log
 dist
 tmp*
 keys
-protected

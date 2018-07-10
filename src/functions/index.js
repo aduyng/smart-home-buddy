@@ -5,6 +5,10 @@ const authCallback = require("./handlers/authCallback");
 const checkInformedDeliveryEmails = require("./handlers/checkInformedDeliveryEmails");
 const getAttachmentImage = require("./handlers/getAttachmentImage");
 const myInformedDelivery = require("./handlers/dialogflow/my-informed-delivery");
+const logger = require("./libs/logger");
+const { FIREBASE_CLOUD_FUNCTION_BASE_URL } = require("./config");
+
+logger.debug(`FIREBASE_CLOUD_FUNCTION_BASE_URL: ${FIREBASE_CLOUD_FUNCTION_BASE_URL}`);
 
 exports.auth = functions.https.onRequest(auth);
 exports.authCallback = functions.https.onRequest(authCallback);

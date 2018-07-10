@@ -1,0 +1,3 @@
+dispatch:
+  - url: "<projectId>.appspot.com/*"
+    service: default

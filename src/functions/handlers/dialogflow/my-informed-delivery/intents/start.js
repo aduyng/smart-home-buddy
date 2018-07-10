@@ -1,13 +1,19 @@
 const _ = require("lodash");
 const moment = require("moment");
+const { SignIn } = require("actions-on-google");
 const firebase = require("../../../../libs/firebase");
+const logger = require("../../../../libs/logger");
 
 module.exports = async (conversation) => {
   const userId = _.attempt(() => conversation.user.profile.payload.sub);
 
   if (_.isError(userId) || !userId) {
-    return conversation.ask("Please sign in so that I know who you are.");
+    logger.debug("Could not find userId, asking the user to sign in.");
+    return conversation.ask(new SignIn());
   }
+
+  logger.debug(`userId: ${userId} started the conversation.`);
+
 
   const today = moment().utc();
   const yesterday = today.clone().subtract(1, "day");

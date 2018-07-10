@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   width="372" height="418" viewBox="0 0 372 418">
+  <metadata><rdf:RDF><cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title>PSHome icon</dc:title>
+  </cc:Work></rdf:RDF></metadata>
+  <path style="fill:none;stroke:#00a1f4;stroke-width:32.77624893;stroke-linecap:round;stroke-linejoin:round"
+     d="M174.598,385.237L135.487,339.108H47.5437V137.288L185.89,37.7632L324.237,137.288V339.108H224.642"/>
+</svg>
