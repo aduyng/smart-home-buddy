@@ -69,3 +69,7 @@ npm-debug.log
 dist
 tmp*
 keys
+src/appengine/config.js
+src/appengine/keys
+.DS_Store
+protected
