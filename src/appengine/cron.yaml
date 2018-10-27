@@ -3,3 +3,7 @@ cron:
   url: /informed-delivery
   schedule: every 2 hours from 8:00 to 14:00
   timezone: America/Chicago
+- description: "sync daily usage from smartmetertexas"
+  url: /smartmetertexas/sync
+  schedule: every 15 minutes from 0:15 to 0:45
+  timezone: America/Chicago

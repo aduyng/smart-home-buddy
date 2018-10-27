@@ -1,8 +1,11 @@
 if (process.env.NODE_ENV === "production") {
   require('@google-cloud/debug-agent').start(); //eslint-disable-line
 }
+
 require("babel-polyfill");
 require("colors");
+require("./libs/initializeEnvironmentVariables");
+
 const express = require("express");
 const logger = require("./libs/logger");
 const routes = require("./routes");

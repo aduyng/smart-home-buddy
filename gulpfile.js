@@ -3,6 +3,8 @@ const clean = require("gulp-clean");
 const sequence = require("run-sequence");
 const babel = require("gulp-babel");
 const shell = require("gulp-shell");
+const path = require("path");
+const config = require("./protected/config.js");
 
 const DIST = "./dist";
 
@@ -13,6 +15,13 @@ gulp.task("build:appengine", (done) => {
     done,
   );
 });
+
+gulp.task("deploy:appengine", shell.task(`gcloud app deploy`, {
+  cwd: path.join(DIST, "appengine"),
+  env: {
+    CLOUDSDK_CORE_PROJECT: config.FIREBASE_PROJECT_ID
+  }
+}));
 
 gulp.task("build:appengine:clean", () => gulp.src(`${DIST}/appengine`, { read: false })
   .pipe(clean()));
@@ -85,3 +94,5 @@ gulp.task("functions", (done) => {
 });
 
 gulp.task("build", ["build:appengine", "build:functions"]);
+
+gulp.task("deploy", ["deploy:appengine"]);
